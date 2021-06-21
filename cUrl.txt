@@ -1,0 +1,30 @@
+1. /login POST
+curl --location --request POST 'localhost:8000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{"username":"john.doe","password":"thisismysecret"}'
+
+2. /users GET (required login)
+curl --location --request POST 'localhost:8000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{"username":"john.doe","password":"thisismysecret"}'
+
+curl --location --request GET 'localhost:8000/users' \
+--data-raw ''
+
+3. /users POST
+curl --location --request POST 'localhost:8000/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{"username":"john.doe","password":"thisismysecret","date_of_birth":"15/01/1985"}'
+
+4. /users/orders POST (required login)
+curl --location --request POST 'localhost:8000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{"username":"john.doe","password":"thisismysecret"}'
+
+curl --location --request POST 'localhost:8000/users/orders' \
+--header 'Content-Type: application/json' \
+--data-raw '{"orders":[1,4]}'
+
+5. /books GET
+curl --location --request GET 'localhost:8000/books' \
+--data-raw ''

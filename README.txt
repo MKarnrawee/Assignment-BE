@@ -1,0 +1,2 @@
+For this assignment, I used Visual Studio Code as a program editor and Postman as an API testing tool.
+I created a user.json file to simulate my DB. And app.js file to be my main file which includes all logic program supports the inquiries.
