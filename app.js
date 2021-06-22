@@ -79,6 +79,10 @@ app.post('/users/orders',async function(req,res){
         console.log(price)
         res.end(JSON.stringify(price))
     }
+    else
+    {
+        res.end("please login")
+    }
 });
 
 app.get('/books',async function(req, res){
